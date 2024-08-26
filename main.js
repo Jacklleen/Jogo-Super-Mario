@@ -3,6 +3,33 @@ const pipe = document.querySelector('.pipe');
 
 const jump = () => {
     document.querySelector('jump');
-}
-document.addEventListener('keydown', jump);
 
+    setTimeout(() => {
+        mario.classList.remove('jump');
+    }
+ ,500);
+}
+
+const loop = setInterval (() => {} )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('keydown', jump);
