@@ -1,8 +1,8 @@
 const mario = document.querySelector('.mario');
+const pipe = document.querySelector('.pipe');
 
 const jump = () => {
     document.querySelector('jump');
 }
-document.addEventListener
+document.addEventListener('keydown', jump);
 
-const pipe 
