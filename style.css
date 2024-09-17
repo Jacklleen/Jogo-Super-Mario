@@ -11,7 +11,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    backgound: linear-gradient(#87ceeb,#e0f6ff);
+    background: linear-gradient(#87ceeb,#e0f6ff);
 }
 
 .pipe, .mario, .nuvem {
@@ -67,7 +67,7 @@ button:hover {
     height: 100vh;
     background: red;
     display: none;
-    alig-items: center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     position: fixed;
