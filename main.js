@@ -3,17 +3,18 @@ const pipe = document.querySelector('.pipe');
 const startButton = document.querySelector('.start');
 const gameOverScreen = document.querySelector(',game-over');
 
+audioStart = new Audio('./sound/audio_theme.mp3');
+const gameOverSound = new Audio('./sound/audio_gameover.mp3');
+
 let gameStarded = false;
 
 const startGame = () => {
-gameStart = true;
-
-pipe.style.animation = 'pipe-animation 1.5s infinite linear';
-
-startButton.style.display = 'none';
-mario.style.opacity = '1';
-pipe.style.opacity = '1';
-clouds.style.opacity = '1';
+    gameStart = true;
+    pipe.style.animation = 'pipe-animation 1.5s infinite linear';
+    startButton.style.display = 'none';
+    mario.style.opacity = '1';
+    pipe.style.opacity = '1';
+    clouds.style.opacity = '1';
 
 }
 
