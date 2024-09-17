@@ -8,17 +8,17 @@ let gameStarded = false;
 const startGame = () => {
 gameStart = true;
 
-pipe.style.animation = "pipe-animation 1.5s infinite linear";
+pipe.style.animation = 'pipe-animation 1.5s infinite linear';
 
-startButton.style.display = "none";
-mario.style.opacity = "1";
-pipe.style.opacity = "1";
-clouds.style.opacity = "1";
+startButton.style.display = 'none';
+mario.style.opacity = '1';
+pipe.style.opacity = '1';
+clouds.style.opacity = '1';
 
 }
 
 const jump = () => {
-    document.querySelector('jump');
+    mario.classList.remove('jump');
 
     setTimeout(() => {
         mario.classList.remove('jump');
