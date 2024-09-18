@@ -13,7 +13,10 @@ let score = 0;
 
 const startGame = () => {
     gameStart = true;
+    audioStart.play();
+
     pipe.style.animation = 'pipe-animation 1.5s infinite linear';
+
     startButton.style.display = 'none';
     mario.style.opacity = '1';
     pipe.style.opacity = '1';
@@ -22,6 +25,7 @@ const startGame = () => {
 }
 
 const jump = () => {
+    if(gameStarded) {
     mario.classList.remove('jump');
 
     setTimeout(() => {
@@ -29,10 +33,15 @@ const jump = () => {
     }
  ,500);
 }
+}
 
+const updateScore = () => {
+    score += 1;
+    scoreElement.textContent = score;
+}
 const loop = setInterval (() => {
-    const pipePosition = pipe.offsetLeft;
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
+const pipePosition = pipe.offsetLeft;
+const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
     if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
         pipe.style.animation = 'none';
@@ -44,9 +53,23 @@ const loop = setInterval (() => {
         mario.src = './img/game-over.png';
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
+        audioStart.pause();
+
+        gameOverSound.play();
 
         clearInterval(loop);
-    
-});
+        gameOverScreen.style.display = 'flex';
+    } else if (pipePosition < 0 && gameStarded) {
+        updateScore();
+        pipe.style.left = '';
+    }
+}, 10);
 
 document.addEventListener('keydown', jump);
+
+const restartGame = () => {
+
+    window.location.reload ();
+}
+
+
