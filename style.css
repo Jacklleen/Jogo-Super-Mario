@@ -56,9 +56,9 @@ button {
 }
 
 button:hover {
-    border: 2px solid green;
+    border: 2px solid rgba(61, 102, 250, 0.633);
     background: none;
-    color: green;
+    color: rgba(61, 102, 250, 0.633);
 }
 
 button.start {
