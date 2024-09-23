@@ -8,11 +8,11 @@ const scoreElement = document.querySelector('.score');
 audioStart = new Audio('./sound/audio_theme.mp3');
 const gameOverSound = new Audio('./sound/audio_gameover.mp3');
 
-let gameStarded = false;
+let gameStarted = false;
 let score = 0;
 
 const startGame = () => {
-    gameStart = true;
+    gameStarted = true;
     audioStart.play();
 
     pipe.style.animation = 'pipe-animation 1.5s infinite linear';
@@ -25,8 +25,8 @@ const startGame = () => {
 }
 
 const jump = () => {
-    if(gameStarded) {
-    mario.classList.remove('jump');
+    if(gameStarted) {
+    mario.classList.add('jump');
 
     setTimeout(() => {
         mario.classList.remove('jump');
@@ -61,7 +61,7 @@ const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
         clearInterval(loop);
         gameOverScreen.style.display = 'flex';
-    } else if (pipePosition < 0 && gameStarded) {
+    } else if (pipePosition < 0 && gameStarted) {
         updateScore();
         pipe.style.left = '';
     }
