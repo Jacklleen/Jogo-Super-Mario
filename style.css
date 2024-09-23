@@ -42,7 +42,7 @@
 }
 
 button {
-    background: rgba(61, 102, 250, 0.633);
+    background: rgb(39, 68, 173);
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
@@ -56,9 +56,9 @@ button {
 }
 
 button:hover {
-    border: 2px solid rgba(61, 102, 250, 0.633);
+    border: 2px solid rgb(39, 68, 173);
     background: none;
-    color: rgba(61, 102, 250, 0.633);
+    color: rgb(39, 68, 173);
 }
 
 button.start {
