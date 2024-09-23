@@ -38,7 +38,7 @@ const jump = () => {
 const updateScore = () => {
     score += 1;
     scoreElement.textContent = score;
-    pipe.style.animation = 'pipe-animation ${animationSpeed}s infinity linear';
+    pipe.style.animation = `pipe-animation ${animationSpeed}s infinity linear`;
 }
 
 const loop = setInterval (() => {
