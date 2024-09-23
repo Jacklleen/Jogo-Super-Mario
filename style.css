@@ -42,7 +42,7 @@
 }
 
 button {
-    background: green;
+    background: rgba(61, 102, 250, 0.633);
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
