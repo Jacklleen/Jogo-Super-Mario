@@ -7,7 +7,7 @@
 .game-board {
     width: 100vw;
     height: 100vh;
-    border-bottom: 15px solid rgb(1, 93, 1);
+    border-bottom: 15px solid rgb(47, 93, 1);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
